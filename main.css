@@ -3,15 +3,19 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: "Quicksand";
+    box-sizing: border-box;
 }
 
 .nav__main-container {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
     height: 120px;
     background-color: #f8f3ec;
+    z-index: 10;
 }
 
 .nav__logo-container {
@@ -33,6 +37,7 @@ body {
 
 .nav__logo-element {
     width: 140px;
+    cursor: pointer;
 }
 
 button {
@@ -43,20 +48,91 @@ button {
     padding: 12px 20px;
     font-size: 18px;
     cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 .main-section__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 60px 0px;
+    height: calc(100vh - 120px);
+    background-image: url("https://images.all-free-download.com/images/graphiclarge/september_in_the_forest_208135.jpg");
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 60px;
+}
+
+.main-section__content {
+    margin-top: -160px;
 }
 
 .main-section__title {
     font-family: "Nixie One";
-    color: #632c2f;
+    color: #ffffff;
     font-size: 38px;
     font-weight: 800;
 }
 
 .who__main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: #f8f3ec;
+    padding: 60px;
+}
+
+.who__details {
+    width: 600px;
+}
+
+.who__main-p {
+    font-family: "Nixie One";
+    font-weight: 600;
+    font-size: 24px;
+    color: #632c2f;
+}
+
+.offer__main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+}
+
+.offer__details {
+    width: 600px;
+}
+
+.contact__main-container {
+    background-color: #4f4f4f;
+    color: #ffffff;
+    padding: 60px;
+}
+
+@media (max-width: 1200px) {
+    .who__image {
+        display: none;
+    }
+
+    .offer__image {
+        display: none;
+    }
+
+    .who__main-container,
+    .offer__main-container {
+        padding: 40px 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav__list-container {
+        display: none;
+    }
 }
