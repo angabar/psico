@@ -40,6 +40,16 @@ body {
     cursor: pointer;
 }
 
+.nav__menu-icon {
+    display: none;
+    width: 28px;
+    cursor: pointer;
+}
+
+.nav__list-container-responsive {
+    display: none;
+}
+
 button {
     font-family: inherit;
     background-color: #632c2f;
@@ -126,7 +136,8 @@ button:hover {
     }
 
     .who__main-container,
-    .offer__main-container {
+    .offer__main-container,
+    .contact__main-container {
         padding: 40px 28px;
     }
 }
@@ -134,5 +145,28 @@ button:hover {
 @media (max-width: 600px) {
     .nav__list-container {
         display: none;
+    }
+
+    .nav__menu-icon {
+        display: initial;
+    }
+
+    .nav__list-container-responsive {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #f8f3ec;
+        top: 120px;
+        left: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .nav__list-element-responsive {
+        list-style: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 22px;
+        margin-top: 48px;
     }
 }
