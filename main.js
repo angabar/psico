@@ -95,3 +95,15 @@ document
             behavior: "smooth",
         });
     });
+
+document.getElementById("contact__whatsapp").addEventListener("click", () => {
+    window.open("https://api.whatsapp.com/send?phone=646874275", "_blank");
+});
+
+document.getElementById("contact__email").addEventListener("click", () => {
+    window.open("mailto:ccgarciapsico@gmail.com", "_blank");
+});
+
+document.getElementById("contact__instagram").addEventListener("click", () => {
+    window.open("https://www.instagram.com/caminopsico/", "_blank");
+});
